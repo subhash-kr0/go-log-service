@@ -1,0 +1,16 @@
+{"level":"info","msg":"Starting server on :8080","time":"2025-03-27T17:04:09Z"}
+{"level":"info","msg":"Handling info request","time":"2025-03-27T17:05:12Z"}
+{"level":"info","msg":"Handling info request","time":"2025-03-27T17:09:21Z"}
+{"level":"info","msg":"Shutting down server gracefully...","time":"2025-03-27T17:09:50Z"}
+{"level":"info","msg":"Server exited properly","time":"2025-03-27T17:09:50Z"}
+{"level":"info","msg":"Starting server on :8080","time":"2025-03-27T17:09:52Z"}
+{"level":"info","msg":"Root route hit","time":"2025-03-27T17:09:57Z"}
+{"level":"info","msg":"Handling info request","time":"2025-03-27T17:10:32Z"}
+{"level":"warning","msg":"Handling warn request","time":"2025-03-27T17:10:46Z"}
+{"level":"info","msg":"Shutting down server gracefully...","time":"2025-03-27T17:19:00Z"}
+{"level":"info","msg":"Server exited properly","time":"2025-03-27T17:19:00Z"}
+{"level":"info","msg":"Starting server on :8080","time":"2025-03-28T03:40:35Z"}
+{"level":"info","msg":"Root route hit","time":"2025-03-28T03:40:44Z"}
+{"level":"info","msg":"Root route hit","time":"2025-03-28T03:40:44Z"}
+{"level":"info","msg":"Shutting down server gracefully...","time":"2025-03-28T03:41:22Z"}
+{"level":"info","msg":"Server exited properly","time":"2025-03-28T03:41:22Z"}
