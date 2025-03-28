@@ -1,17 +1,37 @@
-version: '3'
+# version: '3.8'
+
 services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./logs:/logs
+    networks:
+      - loki-net
+    depends_on:
+      - loki
+      - promtail
+
   loki:
     image: grafana/loki:latest
     ports:
       - "3100:3100"
+    volumes:
+      - ./loki-data:/loki
+      - ./loki-config.yaml:/etc/loki/local-config.yaml
+    command: -config.file=/etc/loki/local-config.yaml
     networks:
       - loki-net
 
   promtail:
     image: grafana/promtail:latest
     volumes:
-      - /var/log:/var/log
+      - ./logs:/logs
       - ./promtail-config.yaml:/etc/promtail/config.yaml
+    command: -config.file=/etc/promtail/config.yaml
     networks:
       - loki-net
     depends_on:
@@ -21,8 +41,12 @@ services:
     image: grafana/grafana:latest
     ports:
       - "3000:3000"
+    volumes:
+      - ./grafana-data:/var/lib/grafana
     networks:
       - loki-net
+    depends_on:
+      - loki
 
 networks:
   loki-net:
